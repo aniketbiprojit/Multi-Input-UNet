@@ -161,4 +161,4 @@ class UNet:
             print(model.summary())
 
 
-UNet(depth=1,num_inputs=3,num_outputs=3).build_model()
+UNet().build_model()
