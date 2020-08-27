@@ -1,0 +1,4 @@
+[tool.black]
+line_length = 120
+verbose = true
+include = '\.pyi?$'
