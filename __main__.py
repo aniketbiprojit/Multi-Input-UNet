@@ -18,6 +18,7 @@ from keras.layers import (
 
 # from keras.callbacks import ModelCheckpoint
 from keras import Model
+from keras.utils import plot_model
 
 # import keras.backend as K
 
@@ -153,6 +154,9 @@ class UNet:
         for i in range(self.num_outputs):
             output_layer.append(Dense(self.output_features)(final_layer))
         model = Model(input_layer, output_layer)
+        
+        plot_model(model, to_file='model.png')
+
         if self.logging:
             print(model.summary())
 
